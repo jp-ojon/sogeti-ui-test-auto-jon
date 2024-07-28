@@ -33,7 +33,7 @@ Use the following commands to run tests in different browsers:
 3. npm run test:webkit      : run all tests for webkit browser only
 4. npx run test:all         : run all tests across all browsers configured under playwright.config.ts -> projects
 
-## Congifuration
+## Configuration
 Configuration can be changed under playwright.config.ts
 - headless                  : can either be true or false, true means browser would show up when tests are run
 - timeout                   : Global timeout for all tests
