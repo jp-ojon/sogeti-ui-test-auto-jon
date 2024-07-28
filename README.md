@@ -13,7 +13,7 @@ Jon Paulo Ojon
 ## Installation
 1. Clone the repository and go to project directory
 - git clone https://github.com/your-repo/sogeti-playwright-tests.git
-- cd SogetiUITestAutoJon
+- cd sogeti-ui-test-auto-jon
 
 2. Install the dependencies:
 - npm install @faker-js/faker       : faker library used to generate random test data
