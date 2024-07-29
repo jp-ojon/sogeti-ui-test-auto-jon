@@ -6,7 +6,7 @@ This test suite includes automated tests for navigating the Sogeti website, fill
 Jon Paulo Ojon
 
 ## Prerequisites
-* Node.js (v14 or later)
+* Node.js (v14 or later), find installer on https://nodejs.org/en/download/package-manager site
 * Playwright
 * faker, @faker-js/faker
 
