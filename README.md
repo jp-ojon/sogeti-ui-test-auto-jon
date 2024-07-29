@@ -1,4 +1,4 @@
-# Playwright Test Suite for Automation Task by Jon Paulo Ojon
+# Playwright Test Suite for Automation Task UI Tests by Jon Paulo Ojon
 ## Overview
 This test suite includes automated tests for navigating the Sogeti website, filling out a form, and verifying country-specific links.
 
