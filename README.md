@@ -27,7 +27,7 @@ Jon Paulo Ojon
 - Test Case 3: Assert that All Country-Specific Sogeti Links Are Working. This test asserts that all the country-specific links on the Sogeti website are working.
 
 ## Running Tests
-Use the following commands to run tests in different browsers:
+Use the following commands in any terminal or cmd line to run tests in different browsers:
 1. npm run test:chromium    : run all tests for chromium browser only
 2. npm run test:firefox     : run all tests for firefox browser only
 3. npm run test:webkit      : run all tests for webkit browser only
