@@ -45,5 +45,11 @@ Configuration can be changed under playwright.config.ts
 - **Resource Management:** Consider running tests in individual browsers to manage resources effectively and reduce flakiness.
 - **Debugging:** If encountering issues, review logs and screenshots to diagnose problems. Adjust test cases if needed to handle browser-specific behaviors.
 
+## Notes
+Options to bypass recaptcha
+1. Configure environment to disable recaptcha or provide simplified CAPTCHA challenges like just click checkbox and then done.
+2. Use Third-Party CAPTCHA Solving Services such as 2Captcha
+3. Mock CAPTCHA Responses: Inject mock responses directly into the application to bypass reCAPTCHA during tests.
+
 ## Links to Documentation
 - Playwright: https://playwright.dev/docs/intro
