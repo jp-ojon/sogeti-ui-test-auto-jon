@@ -50,7 +50,7 @@ test.describe('Sogeti Navigation Tests', () => {
             const url = (await result).urls[i]
             const response = await page.request.get(url)
             // Assert that the HTTP status code is 200 (OK)
-            //expect(response.status()).toBe(200)
+            expect(response.status()).toBe(200)
             console.log(url +' response code: ' + response.status()) 
         }
     })
