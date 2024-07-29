@@ -44,3 +44,6 @@ Configuration can be changed under playwright.config.ts
 - **Note:** It is not recommended to use npx run test:all and run all tests across all browsers in parallel. Please run test for chromium, firefox and webkit separately to avoid flakiness, inconsistent browser behaviours, insufficient resources to support the run, etc.
 - **Resource Management:** Consider running tests in individual browsers to manage resources effectively and reduce flakiness.
 - **Debugging:** If encountering issues, review logs and screenshots to diagnose problems. Adjust test cases if needed to handle browser-specific behaviors.
+
+## Links to Documentation
+- Playwright: https://playwright.dev/docs/intro
