@@ -38,7 +38,7 @@ export class ServicesAutomationPage extends MainPage {
      * @param value the value that is entered on the selected input field
      */
     async fillContactUsInputField(field: string, value: string) {
-        const xpathExpression = `//label[contains(text(),"${field}")]/following-sibling::input`;
+        const xpathExpression = `//label[contains(text(),"${field}")]/following-sibling::input`
         this.contactUsInputField = this.page.locator(xpathExpression)
         await this.contactUsInputField.fill(value)
     }
