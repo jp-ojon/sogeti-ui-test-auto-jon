@@ -2,8 +2,6 @@ import { test, expect } from '@playwright/test'
 import { PageObjectsManager } from '../../page-objects/pageObjectsManager'
 import { RandomGenerator } from '../../utilities/randomGenerator'
 
-// Generate random data
-
 test.beforeEach(async ({ page }) => {
     await page.goto('https://www.sogeti.com/')
 })
