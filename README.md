@@ -35,7 +35,7 @@ Use the following commands in any terminal or cmd line to run tests in different
 
 ## Configuration
 Configuration can be changed under playwright.config.ts
-- headless                  : can either be true or false, true means browser would show up when tests are run
+- headless                  : can either be true or false, false means browser would show up when tests are run
 - timeout                   : Global timeout for all tests
 - expect: timeout           : Timeout for expect() assertions
 - projects: use: viewport   : Screen size, adjust accordingly
