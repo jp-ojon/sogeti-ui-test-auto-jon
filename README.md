@@ -31,7 +31,7 @@ Use the following commands in any terminal or cmd line to run tests in different
 1. npm run test:chromium    : run all tests for chromium browser only
 2. npm run test:firefox     : run all tests for firefox browser only
 3. npm run test:webkit      : run all tests for webkit browser only
-4. npx run test:all         : run all tests across all browsers configured under playwright.config.ts -> projects
+4. npm run test:all         : run all tests across all browsers configured under playwright.config.ts -> projects
 
 ## Configuration
 Configuration can be changed under playwright.config.ts
