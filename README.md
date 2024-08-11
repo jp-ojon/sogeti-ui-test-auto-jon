@@ -20,6 +20,7 @@ Jon Paulo Ojon
 - npx playwright install
 * Libraries used
 * @faker-js/faker       : faker library used to generate random test data
+* axios                 : used for the get request for more leniency versus "invalid header value char"
 
 ## Test Cases
 - Test Case 1: Navigate to Services Automation Page: This test navigates to the Services Automation page on the Sogeti website.
