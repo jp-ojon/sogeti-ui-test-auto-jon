@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 import { PageObjectsManager } from '../../page-objects/pageObjectsManager'
+import axios from 'axios'
 
 
 test.describe('Sogeti Navigation Tests', () => {
@@ -48,10 +49,11 @@ test.describe('Sogeti Navigation Tests', () => {
         // Iterate over each link and verify it, test would fail if the number of non-null urls/hrefs is not equivalent to the number of links
         for (let i = 0; i < (await result).count; i++) {
             const url = (await result).urls[i]
-            const response = await page.request.get(url)
+            const response = axios.get(url, { insecureHTTPParser: true })
+            const statusCode = (await response).status;
             // Assert that the HTTP status code is 200 (OK)
-            expect(response.status()).toBe(200)
-            console.log(url +' response code: ' + response.status()) 
+            expect(statusCode).toBe(200);
+            console.log(url + ' response code: ' + statusCode)
         }
     })
 })
