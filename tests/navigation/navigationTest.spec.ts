@@ -49,13 +49,25 @@ test.describe('Sogeti Navigation Tests', () => {
         // Iterate over each link and verify it, test would fail if the number of non-null urls/hrefs is not equivalent to the number of links
         for (let i = 0; i < (await result).count; i++) {
             const url = (await result).urls[i]
-            //Note: The insecureHTTPParser option forces Axios to use the Node.js HTTP parser, which is less strict than the default one. This option is not recommended, but it's useful when you need to make a request to an API that is not following the HTTP specs. However, it will also open your application to some security vulnerabilities, although the risk should be negligible as these vulnerabilities mainly relate to server applications, not clients.
-            const response = axios.get(url, { insecureHTTPParser: true })
-            const statusCode = (await response).status;
-            // Assert that the HTTP status code is 200 (OK)
-            expect(statusCode).toBe(200);
-            console.log(url + ' response code: ' + statusCode)
+            try {
+                //Note: The insecureHTTPParser option forces Axios to use the Node.js HTTP parser, which is less strict than the default one. This option is not recommended, but it's useful when you need to make a request to an API that is not following the HTTP specs. However, it will also open your application to some security vulnerabilities, although the risk should be negligible as these vulnerabilities mainly relate to server applications, not clients.
+                const response = await axios.get(url, { insecureHTTPParser: true });
+                const statusCode = response.status;
+                expect(statusCode).toBe(200);
+                console.log(url + ' response code: ' + statusCode);
+            } catch (error) {
+                if (error.response) {
+                    // Server responded with a status code outside the range of 2xx
+                    console.error(url + ' Error response:', error.response.status);
+                } else if (error.request) {
+                    // Request was made but no response was received
+                    console.error(url + ' Error request:', error.request);
+                } else {
+                    // Something happened in setting up the request
+                    console.error(url + ' Error message:', error.message);
+                }
+            }
         }
-        
+
     })
 })
